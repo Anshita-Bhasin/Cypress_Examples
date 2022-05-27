@@ -11,6 +11,13 @@ describe('example for typing the text in input without passing any locator', () 
   const input_email=dataJson.email;
 
 
+/*
+  Passing the input value from json file,
+   passing email as random generator ,
+   used .check() to select the checkbox
+   used .tab() to enter tab ..
+     Installed plugin for using tab as cypress does not have direct support for tab
+  */
 
   it('Input values in the textbox and click on submit ', () => {
 
