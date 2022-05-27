@@ -3,4 +3,4 @@
 
 Repo for practising cypress cases
 
-1. Test --> How to submit the form  without passing locators 
+1. Cypress/Integration/TabTest --> How to submit the form  without passing locators 
