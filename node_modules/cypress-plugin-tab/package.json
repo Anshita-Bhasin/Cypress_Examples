@@ -1,0 +1,50 @@
+{
+  "name": "cypress-plugin-tab",
+  "version": "1.0.5",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.eslintrc,.json .",
+    "test-e2e": "cypress run"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "ally.js": "^1.4.1"
+  },
+  "devDependencies": {
+    "@cypress/eslint-plugin-dev": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.0",
+    "@typescript-eslint/parser": "^2.3.0",
+    "cypress": "3.4.1",
+    "eslint": "^6.4.0",
+    "eslint-plugin-cypress": "^2.2.1",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-mocha": "^6.1.1",
+    "http-server": "^0.11.1",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "semantic-release": "^15.13.24",
+    "typescript": "^3.6.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Bkucera/cypress-plugin-tab.git"
+  },
+  "author": "Ben Kucera",
+  "keywords": [
+    "cypress",
+    "plugin",
+    "tab"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,eslintrc}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
