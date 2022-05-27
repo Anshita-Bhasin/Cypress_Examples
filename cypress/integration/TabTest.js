@@ -16,7 +16,8 @@ describe('example for typing the text in input without passing any locator', () 
 
    cy.get('input#input-firstname').type(input_firstName)
        .tab().type(input_lastName)
-       .tab().type(input_email)
+       .tab().type("abc123"+
+       Math.floor((Math.random() * 10) + 1)+"@disposable.com")
        .tab().type(input_mobileNumber)
        .tab().type(input_password)
        .tab().type(input_password)
