@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./cypress/integration/TabTest.js"
+    "test": "npm run test"
   },
   "repository": {
     "type": "git",
