@@ -13,4 +13,9 @@ Repo for practising cypress cases
      Step 2. Add **require('cypress-plugin-tab')** at the top of cypress/support/index.js:
 
 
-<img width="1210" alt="image" src="https://user-images.githubusercontent.com/10338077/170794883-83efbdd2-9d4a-40a8-b1ac-ea2c5aa983e2.png">
+
+
+
+New Site - 
+<img width="1199" alt="image" src="https://user-images.githubusercontent.com/10338077/171161050-5720cef6-dc4b-4d3e-9a5e-a577246f406e.png">
+
