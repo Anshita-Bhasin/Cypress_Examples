@@ -1,6 +1,6 @@
 describe('example for typing the text in input without passing any locator', () => {
   beforeEach(() => {
-    cy.visit('https://demo.opencart.com/index.php?route=account/register')
+    cy.visit('https://naveenautomationlabs.com/opencart/index.php?route=account/register')
   })
 
   const dataJson = require('../fixtures/testData.json');
