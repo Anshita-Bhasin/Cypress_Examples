@@ -1,6 +1,5 @@
 name: Cypress Tests Reporting with AWS
-
- on:
+on:
   push:
     branches: [ main ]
   pull_request:
@@ -8,7 +7,7 @@ name: Cypress Tests Reporting with AWS
   
 
 jobs:
-  Cypress - Report - AWS:
+  CypressReportAWS:
     timeout-minutes: 120
     runs-on: ubuntu-latest
     steps:
