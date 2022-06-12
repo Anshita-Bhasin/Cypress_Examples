@@ -1,0 +1,39 @@
+name: Cypress Tests Reporting with AWS
+
+ on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  
+
+jobs:
+  Cypress - Report - AWS:
+    timeout-minutes: 120
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: cypress-Test-report
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run test
+          browser: chrome
+          headless: true
+          record: false
+      - name: Upload Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: HTML_Report
+          path: cypress/reports/
+      - name: Upload S3    
+        uses: shallwefootball/s3-upload-action@master
+        id: S3
+        with:
+          aws_key_id: AKIAYN7ZEU4KTYEXZG2K
+          aws_secret_access_key: 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
+          aws_bucket: qa.automation.ab
+          source_dir: cypress/reports
+          resource_type: TEST_COVERAGE     
+      - name: Link To Report
+        run: echo “https://qa.automation.ab.s3-ap-south-1.amazonaws.com/${{steps.S3.outputs.object_key}}/index.html”
