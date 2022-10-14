@@ -1,11 +1,14 @@
 const screen = ['iphone-8', 'ipad-2', [1024, 768], 'macbook-13']
+const orienatation = ['landscape', 'portrait']
 
-describe('Testing different viewports scenarios', () => {
+
+describe('Testing different screen size and orienatation', () => {
     screen.forEach((screenView) => {
-        it('Should display viewport as per defined screens', () => {
+        it('Should display viewport for the screens=> Iphone-8,ipad-2 ,macbook-13', () => {
 
             if (Cypress._.isArray(screenView)) {
                 cy.viewport(screenView[0], screenView[1])
+                cy.log("printing viewports", screenView[0], screenView[1])
             }
             else {
                 cy.viewport(screenView)
@@ -14,7 +17,7 @@ describe('Testing different viewports scenarios', () => {
 
         })
     });
-    it('Open website in given viewport and then navigate back to the page', () => {
+    it('Open website in iphone-xr viewport and then navigate back to the first page', () => {
 
         cy.viewport('iphone-xr')
         cy.visit('https://www.tradeling.com');
@@ -35,6 +38,24 @@ describe('Testing different viewports scenarios', () => {
 
 
     })
+
+    orienatation.forEach((orienatation) => {
+        it('Testing different orientation', () => {
+            cy.visit("https://www.dropbox.com/")
+            cy.viewport('iphone-5', orienatation);
+            ;
+
+        })
+
+
+    })
+
+    it('Testing customized width and height', () => {
+        cy.visit("https://www.dropbox.com/")
+        cy.viewport(360, 890);
+    })
+
+
 
 });
 
