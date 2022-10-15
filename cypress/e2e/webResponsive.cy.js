@@ -39,23 +39,32 @@ describe('Testing different screen size and orienatation', () => {
 
     })
 
-    orienatation.forEach((orienatation) => {
-        it('Testing different orientation', () => {
+    Cypress._.each(['landscape', 'portrait'], orienatation => {
+        it(`Testing different ${orienatation}`, () => {
             cy.visit("https://www.dropbox.com/")
-            cy.viewport('iphone-5', orienatation);
-            ;
-
+            cy.viewport('macbook-16', orienatation);
         })
-
-
     })
+
 
     it('Testing customized width and height', () => {
         cy.visit("https://www.dropbox.com/")
         cy.viewport(360, 890);
     })
 
+    Cypress._.each(['macbook-15', 'samsung-note9'], viewport => {
+        it(`works on ${viewport}`, () => {
+            cy.visit("https://www.dropbox.com/")
+            cy.viewport(viewport)
 
+        })
+
+
+    })
+    it(`Config Viewports`, () => {
+        cy.visit("https://www.dropbox.com/")
+        cy.viewport(Cypress.config('viewportWidth'), Cypress.config('viewportHeight'))
+
+    })
 
 });
-
