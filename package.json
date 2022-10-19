@@ -20,5 +20,8 @@
     "cypress": "^10.8.0",
     "cypress-plugin-tab": "^1.0.5",
     "playwright-webkit": "^1.25.2"
+  },
+  "dependencies": {
+    "cypress-commands": "^3.0.0"
   }
 }
