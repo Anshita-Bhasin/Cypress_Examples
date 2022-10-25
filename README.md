@@ -1,21 +1,14 @@
-# Practise_QA
-
-
+# Different Cypress Scenarios which we handle in our daily project
 Repo for practising cypress cases
 
-1. Cypress/Integration/TabTest --> How to submit the form  without passing locators 
-
-
+1.  Submit the form  without passing locators => newTab.js
     NOTE - Cypress does not support tab. So, we need to follow 2 steps 
-
      Step 1. Run **npm install -D cypress-plugin-tab**
-     
      Step 2. Add **require('cypress-plugin-tab')** at the top of cypress/support/index.js:
-
-
-
-
-
-New Site - 
-<img width="1199" alt="image" src="https://user-images.githubusercontent.com/10338077/171161050-5720cef6-dc4b-4d3e-9a5e-a577246f406e.png">
-
+     
+2. Find Text using variables and alias => findText.cy.js
+3. Passing Enter as input value => typeEnter.cy.js
+4. Test Responsiveness , using different viewports => webResponsive.cy.js
+5. Change Different Browsers in test => defineBrowser.cy.js
+6. Open New Tab in cypress => newTab.js
+7. Handle Alert => alertTest.cy.js
