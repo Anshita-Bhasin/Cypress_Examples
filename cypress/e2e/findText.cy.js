@@ -8,8 +8,8 @@ describe("find text of an element", () => {
     });
 
 
-    it("Print Value - ALias (Invoke - Text)", function () {
-        cy.log("===== Print Value ==== ", this.textFunction)
+    it("Print Value - ALias (Invoke - Command)", function () {
+        cy.log("===== Print Value Using Invoke Command ==== ", this.textFunction)
     })
 
 
@@ -22,8 +22,8 @@ describe("find text of an element", () => {
     })
 
 
-    it("Print Value - ALias (Wrap - Text)", function () {
-        cy.log("===== Print Value ==== ", this.wrapValue)
+    it("Print Value - ALias (Wrap - Command)", function () {
+        cy.log("===== Print Value Uisng Wrap Command ==== ", this.wrapValue)
     })
 
 
