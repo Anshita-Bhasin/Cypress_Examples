@@ -12,3 +12,4 @@ Repo for practising cypress cases
 5. Change Different Browsers in test => defineBrowser.cy.js
 6. Open New Tab in cypress => newTab.js
 7. Handle Alert => alertTest.cy.js
+8. Find Length of elements on Page => findLength.cy.js
