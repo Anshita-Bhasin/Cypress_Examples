@@ -13,3 +13,4 @@ Repo for practising cypress cases
 6. Open New Tab in cypress => newTab.js
 7. Handle Alert => alertTest.cy.js
 8. Find Length of elements on Page => findLength.cy.js
+9. Opening google in different ways => google.cy.js
