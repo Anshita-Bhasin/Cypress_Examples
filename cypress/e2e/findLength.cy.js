@@ -1,5 +1,9 @@
+
 describe("Different approaches to find the length of elements on web page", () => {
-    let length, totalCount
+    let length, totalCount, Count
+
+    
+
     beforeEach(() => {
         cy.visit("https://www.tradeling.com/ae-en/catalog/audio-studio")
 
@@ -35,6 +39,16 @@ describe("Different approaches to find the length of elements on web page", () =
 
     it("Printing length - Approach2", () => {
         cy.log("*** length obtained using approach2 is *** " + totalCount)
+    })
+
+    it.only("Finding Length - Approach3 Cypress Method", () => {
+        cy.get("dl.chakra-stack.css-ioc31s")
+            .find('>dd:contains("United Arab Emirates")').its('length').should('eq', 58);
+
+
+
+
+
     })
 
 
