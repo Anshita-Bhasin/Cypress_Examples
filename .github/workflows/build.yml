@@ -1,0 +1,22 @@
+
+name: Cypress Automation
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  Cypress-Test:
+    timeout-minutes: 120
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: cypress-Test-report
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run Cypress_Test
+          browser: chrome
+     
