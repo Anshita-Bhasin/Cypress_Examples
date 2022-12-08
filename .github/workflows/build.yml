@@ -1,12 +1,7 @@
 
 name: Cypress Automation 
 
-on:
-  push:
-    branches: 
-     - main
-  pull_request:
-    - main
+on: [push,pull_request]
 
 jobs:
   Cypress-Test:
