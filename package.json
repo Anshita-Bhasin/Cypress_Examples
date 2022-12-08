@@ -22,6 +22,7 @@
     "playwright-webkit": "^1.25.2"
   },
   "dependencies": {
-    "cypress-commands": "^3.0.0"
+    "cypress-commands": "^3.0.0",
+    "cypress-plugin-api": "^2.6.1"
   }
 }
