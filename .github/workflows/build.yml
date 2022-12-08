@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: cypress-Test-report
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
           command: npm run Cypress_Test
           browser: chrome
