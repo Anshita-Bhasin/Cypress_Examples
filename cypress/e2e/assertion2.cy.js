@@ -8,7 +8,7 @@ describe("Assertion Use Case2 - If Else Condition", () => {
     cy.get('[id="input-password"]').type("Cypress123!!");
 
     cy.get(".btn.btn-primary").then(($value) => {
-      if ($value.length > 1) {
+      if ($value.length > 0) {
         cy.log(" Button Exist ");
         $value.click();
       } else {
@@ -19,7 +19,7 @@ describe("Assertion Use Case2 - If Else Condition", () => {
 
   it("Condition 2- If there are more than 1 elements on the page", () => {
     cy.get(".dropdown-toggle").then(($value) => {
-      if ($value.length > 1) {
+      if ($value.length > 0) {
         cy.log(" Inside If condition ");
         $value.first().click();
       } else {

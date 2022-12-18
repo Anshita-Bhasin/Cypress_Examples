@@ -1,4 +1,4 @@
-describe("Should Exist Assertion - If Else Condition", () => {
+describe(" Assertion Use Case 1- If Else Condition", () => {
   it("Open website and enter username, password", () => {
     cy.visit(
       "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
