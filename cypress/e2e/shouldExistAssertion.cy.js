@@ -15,12 +15,12 @@ describe("Should Exist Assertion - If Else Condition", () => {
   });
   it("Verify Product after search and perform action based on the result", () => {
     cy.contains("Macbook");
-    cy.get(".price-new").should("exist");
-    if (cy.get(".price-new").should("exist")) {
-      cy.log("present");
-      cy.get(".caption").first().click();
-    } else {
-      cy.log("else condition ");
-    }
+    cy.get(".price-new").then(($value) => {
+      if ($value.length > 10) {
+        cy.log(" if condition");
+      } else {
+        cy.log("else condition");
+      }
+    });
   });
 });
