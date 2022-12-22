@@ -16,7 +16,7 @@ describe(" Assertion Use Case 1- If Else Condition", () => {
   it("Verify Product after search and perform action based on the result", () => {
     cy.contains("Macbook");
     cy.get(".price-new").then(($value) => {
-      if ($value.length > 1) {
+      if ($value.length > 0) {
         cy.log(" if condition");
       } else {
         cy.log("else condition");
