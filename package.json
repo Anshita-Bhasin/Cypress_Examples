@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "cypress-commands": "^3.0.0",
-    "cypress-plugin-api": "^2.6.1"
+    "cypress-plugin-api": "^2.6.1",
+    "gremlins.js": "^2.2.0"
   }
 }
