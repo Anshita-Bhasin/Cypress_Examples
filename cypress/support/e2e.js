@@ -14,24 +14,23 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-require('cypress-plugin-tab')
+require("cypress-plugin-tab");
 
-import './commands'
-import 'cypress-plugin-api'
+import "./commands";
+import "cypress-plugin-api";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-
-// Hide fetch/XHR requests
+//Hide fetch/XHR requests
 const app = window.top;
-if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
-    const style = app.document.createElement('style');
-    style.innerHTML =
-        '.command-name-request, .command-name-xhr { display: none }';
-    style.setAttribute('data-hide-command-log-request', '');
+if (!app.document.head.querySelector("[data-hide-command-log-request]")) {
+  const style = app.document.createElement("style");
+  style.innerHTML =
+    ".command-name-request, .command-name-xhr { display: none }";
+  style.setAttribute("data-hide-command-log-request", "");
 
-    app.document.head.appendChild(style);
+  app.document.head.appendChild(style);
 }
 
 Cypress.on("uncaught:exception", (err, runnable) => {
