@@ -1,6 +1,6 @@
 describe("Window hanlding in Cypress", () => {
   it("Handling new Browser Window", function () {
-    cy.visit("https://dev.digitalwellintervention.com/login");
+    //cy.visit("https://testing.com/login");
     cy.get("span:contains('Login')").click();
 
     cy.window().then((win) => {

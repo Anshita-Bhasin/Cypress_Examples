@@ -7,6 +7,5 @@ describe("Custom Commands", () => {
 
     // cy.screenshot("screen3");
 
-    //cy.get('input#email',{force:true})
   });
 });
