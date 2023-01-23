@@ -14,3 +14,5 @@ Repo for practising cypress cases
 7. Handle Alert => alertTest.cy.js
 8. Find Length of elements on Page => findLength.cy.js
 9. Opening google in different ways => google.cy.js
+10.Check if element exist on the page => assertion2.cy.js
+11.Uplaod File using .selectFile() => fileUpload.cy.js
