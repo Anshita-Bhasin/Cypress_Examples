@@ -14,7 +14,7 @@ module.exports = defineConfig({
           return null;
         },
       });
-      require("./cypress/plugins/index.js")(on, config);
+      
     },
     experimentalWebKitSupport: true,
     //defaultCommandTimeout:6000,
