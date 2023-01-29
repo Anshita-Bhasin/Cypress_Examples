@@ -1,5 +1,6 @@
 describe("API Test using plugin cypress-plugin-api", () => {
   it("test api - GET ", () => {
+   
     cy.api("GET", "https://reqres.in/api/users?page=2").should((response) => {
       expect(response.status).to.eq(200);
     });

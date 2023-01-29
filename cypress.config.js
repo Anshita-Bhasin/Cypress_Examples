@@ -7,6 +7,8 @@ module.exports = defineConfig({
   },
 
   e2e: {
+    experimentalStudio: true,
+
     setupNodeEvents(on, config) {
       return on("task", {
         log(message) {
@@ -14,7 +16,6 @@ module.exports = defineConfig({
           return null;
         },
       });
-      
     },
     experimentalWebKitSupport: true,
     //defaultCommandTimeout:6000,
@@ -32,5 +33,5 @@ module.exports = defineConfig({
     viewportHeight: 600,
   },
 
-  defaultCommandTimeout:5000
+  defaultCommandTimeout: 5000,
 });
