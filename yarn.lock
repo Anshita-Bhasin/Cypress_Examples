@@ -445,10 +445,10 @@
   dependencies:
     "ally.js" "^1.4.1"
 
-"cypress@^10.8.0", "cypress@>=3":
-  "integrity" "sha512-QVse0dnLm018hgti2enKMVZR9qbIO488YGX06nH5j3Dg1isL38DwrBtyrax02CANU6y8F4EJUuyW6HJKw1jsFA=="
-  "resolved" "https://registry.npmjs.org/cypress/-/cypress-10.8.0.tgz"
-  "version" "10.8.0"
+"cypress@^12.5.1", "cypress@>=3":
+  "integrity" "sha512-ZmCmJ3lsyeOpBfh410m5+AO2CO1AxAzFBt7k6/uVbNcrNZje1vdiwYTpj2ksPKg9mjr9lR6V8tmlDNMvr4H/YQ=="
+  "resolved" "https://registry.npmjs.org/cypress/-/cypress-12.5.1.tgz"
+  "version" "12.5.1"
   dependencies:
     "@cypress/request" "^2.88.10"
     "@cypress/xvfb" "^1.2.4"

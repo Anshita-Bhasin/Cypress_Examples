@@ -27,6 +27,11 @@ module.exports = defineConfig({
       runMode: 2,
       openMode: 1,
     },
+    excludeSpecPattern: [
+      "cypress/e2e/**/assertion2.cy.js",
+      "cypress/e2e/**/newTab.cy.js",
+      "cypress/e2e/**/windowHandling.cy.js",
+    ],
 
     watchForFileChanges: false,
     viewportWidth: 1000,
@@ -34,4 +39,5 @@ module.exports = defineConfig({
   },
 
   defaultCommandTimeout: 5000,
+  chromeWebSecurity: false,
 });

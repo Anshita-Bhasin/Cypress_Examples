@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Anshita-Bhasin/Practise_QA#readme",
   "devDependencies": {
-    "cypress": "^10.8.0",
+    "cypress": "^12.5.1",
     "cypress-plugin-tab": "^1.0.5",
     "playwright-webkit": "^1.25.2"
   },
