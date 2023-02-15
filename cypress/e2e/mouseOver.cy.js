@@ -1,5 +1,5 @@
 describe("mouse Hover", () => {
-  it("mouse hower", () => {
+  it("mouse hover", () => {
     cy.visit("https://www.costco.com/#", {
       headers: { "Accept-Encoding": "gzip, deflate" },
     });
