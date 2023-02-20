@@ -14,10 +14,28 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-require("cypress-plugin-tab");
 
 import "./commands";
+
+require('@cypress/skip-test/support')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import "cypress-plugin-api";
+import "cypress-real-events/support";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

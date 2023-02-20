@@ -36,6 +36,11 @@
     "tunnel-agent" "^0.6.0"
     "uuid" "^8.3.2"
 
+"@cypress/skip-test@^2.6.1":
+  "integrity" "sha512-X+ibefBiuOmC5gKG91wRIT0/OqXeETYvu7zXktjZ3yLeO186Y8ia0K7/gQUpAwuUi28DuqMd1+7tBQVtPkzbPA=="
+  "resolved" "https://registry.npmjs.org/@cypress/skip-test/-/skip-test-2.6.1.tgz"
+  "version" "2.6.1"
+
 "@cypress/xvfb@^1.2.4":
   "integrity" "sha512-skbBzPggOVYCbnGgV+0dmBdW/s77ZkAOXIC1knS8NagwDjBrNC1LuXtQJeiN6l+m7lzmHtaoUw/ctJKdqkG57Q=="
   "resolved" "https://registry.npmjs.org/@cypress/xvfb/-/xvfb-1.2.4.tgz"
@@ -445,7 +450,12 @@
   dependencies:
     "ally.js" "^1.4.1"
 
-"cypress@^12.5.1", "cypress@>=3":
+"cypress-real-events@^1.7.6":
+  "integrity" "sha512-yP6GnRrbm6HK5q4DH6Nnupz37nOfZu/xn1xFYqsE2o4G73giPWQOdu6375QYpwfU1cvHNCgyD2bQ2hPH9D7NMw=="
+  "resolved" "https://registry.npmjs.org/cypress-real-events/-/cypress-real-events-1.7.6.tgz"
+  "version" "1.7.6"
+
+"cypress@^12.5.1", "cypress@^4.x || ^5.x || ^6.x || ^7.x || ^8.x || ^9.x || ^10.x || ^11.x || ^12.x", "cypress@>=3":
   "integrity" "sha512-ZmCmJ3lsyeOpBfh410m5+AO2CO1AxAzFBt7k6/uVbNcrNZje1vdiwYTpj2ksPKg9mjr9lR6V8tmlDNMvr4H/YQ=="
   "resolved" "https://registry.npmjs.org/cypress/-/cypress-12.5.1.tgz"
   "version" "12.5.1"

@@ -18,7 +18,7 @@ module.exports = defineConfig({
       });
     },
     experimentalWebKitSupport: true,
-    //defaultCommandTimeout:6000,
+
     slowTestThreshold: 20000,
 
     specPattern: "cypress/e2e/**/*.cy.js",
@@ -28,9 +28,7 @@ module.exports = defineConfig({
       openMode: 1,
     },
     excludeSpecPattern: [
-      "cypress/e2e/**/assertion2.cy.js",
-      "cypress/e2e/**/newTab.cy.js",
-      "cypress/e2e/**/windowHandling.cy.js",
+     
     ],
 
     watchForFileChanges: false,

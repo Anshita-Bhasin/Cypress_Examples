@@ -1,5 +1,5 @@
 {
-  "name": "practise_qa",
+  "name": "practice_qa",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/Anshita-Bhasin/Practise_QA#readme",
   "devDependencies": {
+    "@cypress/skip-test": "^2.6.1",
     "cypress": "^12.5.1",
     "cypress-plugin-tab": "^1.0.5",
+    "cypress-real-events": "^1.7.6",
     "playwright-webkit": "^1.25.2"
   },
   "dependencies": {
@@ -27,4 +29,3 @@
     "gremlins.js": "^2.2.0"
   }
 }
-
