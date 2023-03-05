@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+import { unlinkSync } from 'fs'
 
 module.exports = defineConfig({
   env: {
@@ -10,12 +11,25 @@ module.exports = defineConfig({
     experimentalStudio: true,
 
     setupNodeEvents(on, config) {
-      return on("task", {
-        log(message) {
-          console.log(message);
-          return null;
-        },
-      });
+      // return on("task", {
+      //   log(message) {
+      //     console.log(message);
+      //     return null;
+      //   },
+      // });
+
+      on('after:spec', (spec, results) => {
+        if (config.video) {
+          if (results.stats.failures || results.stats.skipped) {
+            console.log(" Preserve video => Failed/ Skipped Spec")
+          }
+          else {
+            unlinkSync(results.video)
+            console.log('Deleting videos for passed spec files')
+          }
+        }
+      })
+
     },
     experimentalWebKitSupport: true,
 
@@ -28,7 +42,7 @@ module.exports = defineConfig({
       openMode: 1,
     },
     excludeSpecPattern: [
-     
+
     ],
 
     watchForFileChanges: false,
