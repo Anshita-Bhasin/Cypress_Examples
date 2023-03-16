@@ -1,5 +1,5 @@
 const { defineConfig } = require("cypress");
-import { unlinkSync } from 'fs'
+//import { unlinkSync } from 'fs'
 
 module.exports = defineConfig({
   env: {
@@ -10,7 +10,11 @@ module.exports = defineConfig({
   e2e: {
     experimentalStudio: true,
 
+
+
     setupNodeEvents(on, config) {
+
+
       // return on("task", {
       //   log(message) {
       //     console.log(message);
@@ -18,17 +22,46 @@ module.exports = defineConfig({
       //   },
       // });
 
-      on('after:spec', (spec, results) => {
-        if (config.video) {
-          if (results.stats.failures || results.stats.skipped) {
-            console.log(" Preserve video => Failed/ Skipped Spec")
-          }
-          else {
-            unlinkSync(results.video)
-            console.log('Deleting videos for passed spec files')
-          }
+      /* on('after:spec', (spec, results) => {
+         if (config.video) {
+           if (results.stats.failures || results.stats.skipped) {
+             console.log(" Preserve video => Failed/ Skipped Spec")
+           }
+           else {
+             unlinkSync(results.video)
+             console.log('Deleting videos for passed spec files')
+           }
+         }
+       }) 
+
+      if (browser.family === 'firefox') {
+        const existingMimeTypes =
+          options.preferences['browser.helperApps.neverAsk.saveToDisk']
+        const myMimeType = 'my/mimetype'
+
+        // prevents the browser download prompt
+        options.preferences[
+          'browser.helperApps.neverAsk.saveToDisk'
+        ] = `${existingMimeTypes},${myMimeType}`
+
+        return options
+      }
+    })
+*/
+
+/* Disable image load on runing test in Chromium based browser */
+
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        console.log(launchOptions.args)
+        if (browser.family === 'chromium' && browser.name !== 'electron') {
+       launchOptions.args.push('--blink-settings=imagesEnabled=false')
+
+          return launchOptions
         }
+       
+
       })
+
 
     },
     experimentalWebKitSupport: true,
@@ -51,5 +84,20 @@ module.exports = defineConfig({
   },
 
   defaultCommandTimeout: 5000,
-  chromeWebSecurity: false,
+  //chromeWebSecurity: false,
+
+  //"chromeWebSecurity": false,
+
+
+  // "chromePreferences": {
+  //   "profile.default_content_settings": {
+  //     "images": 2
+  //   },
+  //   "profile.managed_default_content_settings": {
+  //     "insecure_content": "allow"
+  //   }
+  // }
+
+
+
 });
