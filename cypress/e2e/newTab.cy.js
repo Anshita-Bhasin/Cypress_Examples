@@ -6,6 +6,7 @@ it.only("loads the page using approach1", () => {
     .invoke("attr", "target", "_self")
     .click({ force: true });
   cy.go(-1)
+  cy.contains("GET A DEMO").click({ force: true })
 });
 
 it.only("loads the page using approach2", () => {
