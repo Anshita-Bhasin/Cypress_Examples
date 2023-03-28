@@ -3,5 +3,23 @@
   "lastName": "Bhasin",
   "mobileNumber": "0123456789",
   "password": "Test123!",
-  "email": "abc123AB@disposable.com"
+  "email": "abc123AB@disposable.com",
+
+  "data":{
+
+    "attributes":[
+
+      {
+  "slug": "allocation1",
+  "id": "45883e22-bc75-416c-87cc-efbd3223cf65"
+},
+  {
+    "slug": "2",
+    "id": "45883e22-bc75-416c-87cc-efbd3223cf65"
+  }
+
+    ]
+
+
+  }
 }

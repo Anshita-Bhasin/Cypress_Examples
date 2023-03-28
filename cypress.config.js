@@ -49,16 +49,16 @@ module.exports = defineConfig({
     })
 */
 
-/* Disable image load on runing test in Chromium based browser */
+      /* Disable image load on runing test in Chromium based browser */
 
       on('before:browser:launch', (browser = {}, launchOptions) => {
         console.log(launchOptions.args)
         if (browser.family === 'chromium' && browser.name !== 'electron') {
-       launchOptions.args.push('--blink-settings=imagesEnabled=false')
+          launchOptions.args.push('--blink-settings=imagesEnabled=false')
 
           return launchOptions
         }
-       
+
 
       })
 
@@ -68,7 +68,7 @@ module.exports = defineConfig({
 
     slowTestThreshold: 20000,
 
-    specPattern: "cypress/e2e/**/*.cy.js",
+    specPattern: "cypress/e2e/*.cy.js",
 
     retries: {
       runMode: 2,
