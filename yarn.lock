@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@4tw/cypress-drag-drop@^2.2.3":
+  "integrity" "sha512-ADMNoELeQdcGLPjfTJ5jWupBKU3rmQAnTqaRhuEa3hQGZ6suR49Ya5SReUrwvJnfAR4pgMcnSkqLqi1F4EPuwA=="
+  "resolved" "https://registry.npmjs.org/@4tw/cypress-drag-drop/-/cypress-drag-drop-2.2.3.tgz"
+  "version" "2.2.3"
+
 "@babel/parser@^7.16.4":
   "integrity" "sha512-r27t/cy/m9uKLXQNWWebeCUHgnAZq0CpG1OwKRxzJMP1vpSU4bSIK2hq+/cp0bQxetkXx38n09rNu8jVkcK/zA=="
   "resolved" "https://registry.npmjs.org/@babel/parser/-/parser-7.20.5.tgz"
@@ -451,6 +456,11 @@
   dependencies:
     "path-browserify" "^1.0.1"
 
+"cypress-drag-drop@^1.1.1":
+  "integrity" "sha512-sp1dILmN8HXCUIeeztqlCslyghFT5w1gHM7RFA/AUSLKmDI/ovxNhZQI6U2/cbH2ehbCuvPppyh99uEt9dhF3w=="
+  "resolved" "https://registry.npmjs.org/cypress-drag-drop/-/cypress-drag-drop-1.1.1.tgz"
+  "version" "1.1.1"
+
 "cypress-plugin-api@^2.6.1":
   "integrity" "sha512-bpQZZWWhCLrsUBAcopZkgXTkLDTVnZQdpv1lSQfFkVc2DkJ6/eaH3PKiUh7QMVQ0afWrV40fFFXqLSPLd5nxLw=="
   "resolved" "https://registry.npmjs.org/cypress-plugin-api/-/cypress-plugin-api-2.6.1.tgz"
@@ -473,7 +483,7 @@
   "resolved" "https://registry.npmjs.org/cypress-real-events/-/cypress-real-events-1.7.6.tgz"
   "version" "1.7.6"
 
-"cypress@^12.5.1", "cypress@^4.x || ^5.x || ^6.x || ^7.x || ^8.x || ^9.x || ^10.x || ^11.x || ^12.x", "cypress@>=3":
+"cypress@^12.5.1", "cypress@^2.1.0 || ^3.1.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0", "cypress@^4.x || ^5.x || ^6.x || ^7.x || ^8.x || ^9.x || ^10.x || ^11.x || ^12.x", "cypress@>=3":
   "integrity" "sha512-lIFbKdaSYAOarNLHNFa2aPZu6YSF+8UY4VRXMxJrFUnk6RvfG0AWsZ7/qle/aIz30TNUD4aOihz2ZgS4vuQVSA=="
   "resolved" "https://registry.npmjs.org/cypress/-/cypress-12.8.1.tgz"
   "version" "12.8.1"

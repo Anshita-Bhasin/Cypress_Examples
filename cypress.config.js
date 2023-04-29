@@ -54,7 +54,7 @@ module.exports = defineConfig({
       on('before:browser:launch', (browser = {}, launchOptions) => {
         console.log(launchOptions.args)
         if (browser.family === 'chromium' && browser.name !== 'electron') {
-          launchOptions.args.push('--blink-settings=imagesEnabled=false')
+          //launchOptions.args.push('--blink-settings=imagesEnabled=false')
 
           return launchOptions
         }
@@ -70,10 +70,10 @@ module.exports = defineConfig({
 
     specPattern: "cypress/e2e/*.cy.js",
 
-    retries: {
-      runMode: 2,
-      openMode: 1,
-    },
+    //retries: {
+      //runMode: 1,
+      //openMode: 1,
+    //},
     excludeSpecPattern: [
 
     ],

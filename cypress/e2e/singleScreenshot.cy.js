@@ -1,6 +1,6 @@
 describe("Custom Commands", () => {
   it("use login method from custom commands", () => {
-    cy.login("lambdatest.Cypress@disposable.com", "Cypress123!!").screenshot();
+    cy.visit("https://bstackdemo.com/").screenshot();
     cy.get('[name="search"]').eq(0).type("Macbook").screenshot();
 
     //cy.screenshot("test3", { capture: "fullPage" });
@@ -8,4 +8,10 @@ describe("Custom Commands", () => {
     // cy.screenshot("screen3");
 
   });
+
+  it('should take a screenshot with timestamp', () => {
+    cy.visit("https://bstackdemo.com/");
+    cy.screenshotWithTimestamp('my-screenshot');
+  });
+
 });

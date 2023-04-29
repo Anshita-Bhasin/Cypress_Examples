@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Anshita-Bhasin/Practise_QA#readme",
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.3",
     "@cypress/skip-test": "^2.6.1",
     "cypress": "^12.5.1",
     "cypress-plugin-tab": "^1.0.5",
@@ -26,6 +27,7 @@
   "dependencies": {
     "Cypress": "npm:cypress@^12.8.1",
     "cypress-commands": "^3.0.0",
+    "cypress-drag-drop": "^1.1.1",
     "cypress-plugin-api": "^2.6.1",
     "gremlins.js": "^2.2.0",
     "words-to-numbers": "^1.5.1"
