@@ -44,3 +44,15 @@ Cypress.Commands.add('dragAndDrop', (dragElement, dropElement) => {
     cy.wait(2000)
 
 })
+/* Access this command in other tests 
+In below code, first the value is stored as alias using cy.wrap(value).as('sumOfNumbers').
+Then, using cy.get('@sumOfNumbers') => It retrieves the value stored in sumOfNumbers
+
+*/
+Cypress.Commands.add('sum', (first, second) => {
+    const value = first + second
+    cy.wrap(value).as('sumOfNumbers')
+    return cy.get('@sumOfNumbers').then((value) => {
+        return value;})
+
+})
