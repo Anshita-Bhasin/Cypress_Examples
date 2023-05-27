@@ -49,10 +49,19 @@ In below code, first the value is stored as alias using cy.wrap(value).as('sumOf
 Then, using cy.get('@sumOfNumbers') => It retrieves the value stored in sumOfNumbers
 
 */
-Cypress.Commands.add('sum', (first, second) => {
+Cypress.Commands.add('sumTest', (first, second) => {
     const value = first + second
     cy.wrap(value).as('sumOfNumbers')
     return cy.get('@sumOfNumbers').then((value) => {
-        return value;})
+        return value;
+    })
+
+})
+
+
+
+Cypress.Commands.add('sum', (first, second) => {
+    const value = first + second
+    return cy.wrap(value);
 
 })
