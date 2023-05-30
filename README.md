@@ -16,3 +16,4 @@ Repo for practising cypress cases
 9. Opening google in different ways => google.cy.js
 10.Check if element exist on the page => assertion2.cy.js
 11.Uplaod File using .selectFile() => fileUpload.cy.js
+12.Drag and drop =>dragAndDrop.cy.js
