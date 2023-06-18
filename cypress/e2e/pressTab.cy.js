@@ -1,4 +1,4 @@
-describe("example for typing the text in input without passing any locator", () => {
+describe("Enter the text without passing .click()", () => {
   beforeEach(() => {
     cy.visit(
       "https://naveenautomationlabs.com/opencart/index.php?route=account/register"
@@ -10,19 +10,18 @@ describe("example for typing the text in input without passing any locator", () 
   const input_lastName = dataJson.lastName;
   const input_mobileNumber = dataJson.mobileNumber;
   const input_password = dataJson.password;
-  const input_email = dataJson.email;
 
   /*
   Passing the input value from json file,
    passing email as random generator ,
    used .check() to select the checkbox
    used .tab() to enter tab ..
-     Installed plugin for using tab as cypress does not have direct support for tab
+     Installed plugin => npm install -D cypress-plugin-tab
+     for using tab as cypress does not have direct support for tab
   */
 
   it("Input values in the textbox and click on submit ", () => {
     cy.get("input#input-firstname")
-      .debug()
       .type(input_firstName)
       .tab()
       .type(input_lastName, { log: false })
@@ -45,12 +44,5 @@ describe("example for typing the text in input without passing any locator", () 
     cy.log("browser version ", Cypress.browser.version);
   });
 
-  it("Test2", () => {
-    cy.visit(
-      "https://naveenautomationlabs.com/opencart/index.php?route=account/register"
-    );
-    cy.get("input#input-firstname").type("Cypress");
-    cy.pause();
-    cy.get("input#input-lastname").debug().type("Last");
-  });
+
 });

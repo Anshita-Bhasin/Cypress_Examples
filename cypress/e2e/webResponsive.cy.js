@@ -31,9 +31,9 @@ describe('Testing different screen size and orienatation', () => {
         cy.viewport('samsung-s10')
         cy.visit("https://www.youtube.com");
         cy.get(' yt-icon-button#search-button-narrow').type('automation')
-        cy.get('ul[role="listbox"]').contains("automation course").click();
+        cy.get('ul[role="listbox"]').contains("automation course").click({ force: true });
         cy.wait(5000);
-        cy.get('yt-icon.topbar-icons.style-scope.ytd-masthead').click()
+        cy.get('yt-icon.topbar-icons.style-scope.ytd-masthead').click({ force: true })
         cy.get('input#search').clear().type('node js')
 
 

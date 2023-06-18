@@ -1,15 +1,7 @@
 describe("Hello Cypress Studio", () => {
-  it("Cypress Test using Cypress Studio", () => {
-    Cypress.Commands.add(name, callbackFn);
- 
-    cy.visit("https://bstackdemo.com/");
-  });
-
-
-  
 
   /* ==== Test Created with Cypress Studio ==== */
-  it('recorder_test', function() {
+  it('recorder_test', function () {
     /* ==== Generated with Cypress Studio ==== */
     cy.visit('https://bstackdemo.com/');
     cy.get('#\\31  > .shelf-item__buy-btn').click();

@@ -18,7 +18,8 @@ describe(" Different ways to open google.com", () => {
     it('open google with no www', () => {
         cy.visit("http://google.com")
     })
-    it('open google with no www', () => {
+    it('error Case - open google with no www', () => {
+
         cy.visit("google.com")
     })
 

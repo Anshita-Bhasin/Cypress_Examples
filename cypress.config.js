@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   env: {
-    webURL: "https://medium.com",
+    webURL: "https://naveenautomationlabs.com/opencart/index.php?route=account/login",
     login_username: "TestAB",
   },
 
@@ -15,12 +15,12 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
 
 
-      // return on("task", {
-      //   log(message) {
-      //     console.log(message);
-      //     return null;
-      //   },
-      // });
+      return on("task", {
+        log(message) {
+          console.log(message);
+          return null;
+        },
+      });
 
       /* on('after:spec', (spec, results) => {
          if (config.video) {
@@ -71,8 +71,8 @@ module.exports = defineConfig({
     specPattern: "cypress/e2e/*.cy.js",
 
     //retries: {
-      //runMode: 1,
-      //openMode: 1,
+    //runMode: 1,
+    //openMode: 1,
     //},
     excludeSpecPattern: [
 
@@ -85,9 +85,6 @@ module.exports = defineConfig({
 
   defaultCommandTimeout: 5000,
   //chromeWebSecurity: false,
-
-  //"chromeWebSecurity": false,
-
 
   // "chromePreferences": {
   //   "profile.default_content_settings": {

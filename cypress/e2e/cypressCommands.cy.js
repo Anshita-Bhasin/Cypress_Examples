@@ -1,16 +1,6 @@
 describe("Cypress useful commands", () => {
-  it.skip("cypress commands", () => {
-    cy.visit(
-      "https://naveenautomationlabs.com/opencart/index.php?route=common/home"
-    );
-    cy.get("[alt='iPhone']").as("iphone");
-    cy.get("@iphone").click();
 
-    cy.get("[placeholder='Search']").type("{shift}macbook");
-    cy.get("[placeholder='Search']").clear();
-    cy.get("#button-cart").click();
-  });
-  it.only("opne cart registration form", () => {
+  it("open cart registration form", () => {
     cy.visit(
       "https://naveenautomationlabs.com/opencart/index.php?route=account/register"
     );
@@ -29,7 +19,7 @@ describe("Cypress useful commands", () => {
     cy.get("[type='checkbox']").check();
   });
 
-  it.skip("DropDown Example", () => {
+  it("DropDown Example", () => {
     cy.visit(
       "https://chercher.tech/practice/practice-dropdowns-selenium-webdriver"
     );
@@ -45,7 +35,7 @@ it("API Test", () => {
     (response) => {
       console.log("response is == ", response);
       console.log(response.status);
-      //assert(response.status, "200");
+      assert(response.status, "200");
     }
   );
 });
@@ -61,16 +51,16 @@ it("Cypress Command - ScrollTo", () => {
   cy.scrollTo(0, 500);
   cy.scrollTo("topRight");
   cy.scrollTo("bottom");
-  // cy.get("#input-lastname").scrollTo("center");
+
 });
-it.only(".focus() - focus on a DOM element", () => {
+it(".focus() - focus on a DOM element", () => {
   cy.visit(
     "https://naveenautomationlabs.com/opencart/index.php?route=account/register"
   );
   cy.get("[placeholder='Search']").type("macbook").focus();
 });
 
-it.only(".blur() - blur off a DOM element", () => {
+it(".blur() - blur off a DOM element", () => {
   cy.visit(
     "https://naveenautomationlabs.com/opencart/index.php?route=account/register"
   );

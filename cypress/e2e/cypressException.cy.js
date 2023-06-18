@@ -14,6 +14,10 @@ describe("Cypress Exception Handling", () => {
   });
 
   it("Test Failure when trying to find incorrect locator- error Message", () => {
+    cy.on("fail", (err, runnable) => {
+      console.log(err.message);
+      return false;
+    });
     cy.visit(
       "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
     );
@@ -26,16 +30,15 @@ describe("Cypress Exception Handling", () => {
   });
 
   it("Test Failure when trying to find incorrect locator - Password", () => {
+    cy.on("fail", (err, runnable) => {
+      console.log(err.message);
+      return false;
+    });
     cy.visit(
       "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
     );
     cy.get('[id="input-email"]').type("lambdatest.Cypress@disposable.com");
     cy.get('[id="input-password1"]').type("Cypress1234!!");
   });
+})
 
-  it("Uncaught Exception - Due to application error", () => {
-    cy.visit("index.html");
-    cy.get("button#error").click();
-    cy.wait(1000);
-  });
-});

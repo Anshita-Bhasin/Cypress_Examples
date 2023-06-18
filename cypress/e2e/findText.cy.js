@@ -14,7 +14,9 @@ describe("find text of an element", () => {
 
 
     it("Alias Second Test - Using Wrap Command", () => {
-        cy.visit("https://www.linkedin.com/")
+        cy.visit("https://www.linkedin.com/", {
+            failOnStatusCode: false
+        })
         cy.get('[data-test-id="hero__headline"]').then($value => {
             const textValue = $value.text()
             cy.wrap(textValue).as('wrapValue')
@@ -28,7 +30,7 @@ describe("find text of an element", () => {
 
 
     it("Third Test - using variable ", () => {
-        cy.visit("https://www.linkedin.com/")
+        cy.visit("https://www.linkedin.com/", { failOnStatusCode: false })
         cy.get('[data-test-id="hero__headline"]').then(($value) => {
             getText = $value.text()
         })

@@ -1,11 +1,12 @@
-describe(" Different ways to open google.com", () => {
+
+describe(" Read csv file using cy.readFile", () => {
 
     it('Read csv', () => {
-        cy.readFile('../fixtures/test.csv').then((data)=>{
-            cy.log("data === " +data)
+        cy.readFile('cypress/fixtures/test.csv').then((data) => {
+            cy.log("data === " + data)
         })
     })
-    
+
 
 
 })

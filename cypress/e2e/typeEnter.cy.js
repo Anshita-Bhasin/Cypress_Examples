@@ -1,17 +1,14 @@
+describe('Pass Enter Key : Open google and search for text without clicking google search button', () => {
 
-describe('Typing value and then clicking enter', () => {
 
-    it('Test type and enter', () => {
+    it('Pass Enter Key ', () => {
 
-        cy.visit("https://accounts.google.com/")
-        cy.get('input#identifierId').type('anshita{enter}');
-
-    })
-    it("Type enter in first and second element", () => {
-
-        cy.visit("https://accounts.google.com/")
-        cy.get('input#identifierId').eq(0).click().type('anshita{enter}');
-       
+        cy.visit("https://www.google.com")
+        cy.get('#APjFqb').type("time{enter}")
+        cy.contains("time.is").click()
+        cy.origin("https://www.time.is", () => {
+            cy.log(" == test===")
+        })
 
     })
 

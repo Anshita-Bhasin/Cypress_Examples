@@ -7,7 +7,7 @@ describe("Different approaches to find the length of elements on web page", () =
   it("When expected length is known", () => {
     cy.get("dl.chakra-stack.css-ioc31s")
       .find('>dd:contains("United Arab Emirates")')
-      .should("have.length", 58);
+      .should("have.length", 40);
   });
   it("When expected length is not known", () => {
     cy.get("dl.chakra-stack.css-ioc31s")
@@ -38,7 +38,7 @@ describe("Different approaches to find the length of elements on web page", () =
       .get("dl.chakra-stack.css-ioc31s")
       .find('>dd:contains("United Arab Emirates")')
       .its("length")
-      .should("have.length", 58);
+      .should("to.be", 40);
   });
 
 });

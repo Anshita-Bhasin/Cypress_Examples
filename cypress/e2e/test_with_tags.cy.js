@@ -10,7 +10,7 @@ describe('My Test Suite', () => {
     it('Test Case 2', { tags: 'regression' }, () => {
         cy.visit(
             "https://bstackdemo.com/")
-        cy.get('.shelf-item__buy-btn').eq(1).click(); // test code
+        cy.get('.shelf-item__buy-btn').eq(1).click(); 
     })
 
                       
