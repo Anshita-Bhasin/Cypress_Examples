@@ -5,12 +5,8 @@ describe("Cypress useful commands", () => {
       "https://naveenautomationlabs.com/opencart/index.php?route=account/register"
     );
     cy.get("#input-firstname").type("Test AB");
-    cy.get("#input-firstname").type("Test");
-
     cy.get("#input-lastname").type("AB", { delay: 1000 });
-
     cy.get("#input-email").type("Test.AB@disposable.com");
-
     cy.get("#input-telephone").type("234567890");
     cy.get("#input-password").type("testA12!!");
     cy.get("#input-confirm").type("testA12!!");
