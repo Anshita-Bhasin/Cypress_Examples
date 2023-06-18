@@ -2,8 +2,9 @@
 
   Cypress Examples
 
-1.  Submit the form  without passing click => newTab.js
-    NOTE - Cypress does not support tab. So, we need to follow 2 steps 
+1.  Submit the form  without passing click => newTab.js 
+
+     NOTE - Cypress does not support tab. So, we need to follow 2 steps 
      Step 1. Run **npm install -D cypress-plugin-tab**
      Step 2. Add **require('cypress-plugin-tab')** at the top of cypress/support/index.js:
      
