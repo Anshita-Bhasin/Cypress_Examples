@@ -1,6 +1,6 @@
 # Different Cypress Scenarios which we handle in our daily project
 
- Cypress Examples
+  Cypress Examples
 
 1.  Submit the form  without passing locators => newTab.js
     NOTE - Cypress does not support tab. So, we need to follow 2 steps 
