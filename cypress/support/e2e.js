@@ -16,6 +16,8 @@
 // Import commands.js using ES2015 syntax:
 
 import "./commands";
+import 'cypress-file-upload';
+
 
 import "cypress-plugin-api";
 import "cypress-real-events/support";

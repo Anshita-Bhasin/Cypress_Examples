@@ -6,7 +6,7 @@ describe("Upload File Request", () => {
   });
   it.skip("TC2- Error Case- No Input Field|| upload File without changing action", () => {
     cy.visit("https://www.ilovepdf.com/pdf_to_word");
-    cy.get("a#pickfiles").selectFile("test.pdf");
+    cy.contains("Select PDF file").selectFile("test.pdf");
   });
   it.skip("TC3- Upload File with input field", () => {
     cy.visit("https://demoqa.com/upload-download");

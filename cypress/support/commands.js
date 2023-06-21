@@ -24,6 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+
 Cypress.Commands.add('screenshotWithTimestamp', (name) => {
     const timestamp = new Date().toLocaleString();
     const fileName = `${name}-${timestamp}`;

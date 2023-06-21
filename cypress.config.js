@@ -1,5 +1,15 @@
 const { defineConfig } = require("cypress");
 //import { unlinkSync } from 'fs'
+const xlsx = require("xlsx")
+
+
+function readDataFromExcel(data) {
+
+  const workbook = xlsx.readFile(data.filePath, { dateNF: 'mm/dd/yyyy' });
+  const worksheet = workbook.Sheets[data.sheetName];
+  return xlsx.utils.sheet_to_json(worksheet, { raw: false });
+}
+
 
 module.exports = defineConfig({
   env: {
@@ -13,14 +23,18 @@ module.exports = defineConfig({
 
 
     setupNodeEvents(on, config) {
+      on("task", {
+        readDataFromExcel: readDataFromExcel,
+      })
+      return config
 
 
-      return on("task", {
+    /*  return on("task", {
         log(message) {
           console.log(message);
           return null;
         },
-      });
+      }); */
 
       /* on('after:spec', (spec, results) => {
          if (config.video) {
