@@ -49,3 +49,5 @@
 40. Handle checkbox in Cypress => checkbox.cy.js
 41. Blur and focus on an element in Cypress => blurAndFocus.cy.js
 42. Read data from Excel in Cypress => readExcelData.cy.js
+ => Run "npm install node-xlsx --save"
+
