@@ -20,20 +20,20 @@ module.exports = defineConfig({
     experimentalStudio: true,
     setupNodeEvents(on, config) {
       on("task", {
-        readDataFromExcel:(data)=>{
+        readDataFromExcel: (data) => {
           return readDataFromExcel(data)
 
-        } ,
+        },
       })
       return config
 
 
-    /*  return on("task", {
-        log(message) {
-          console.log(message);
-          return null;
-        },
-      }); */
+      /*  return on("task", {
+          log(message) {
+            console.log(message);
+            return null;
+          },
+        }); */
 
       /* on('after:spec', (spec, results) => {
          if (config.video) {
@@ -62,7 +62,7 @@ module.exports = defineConfig({
     })
 */
 
-      /* Disable image load on runing test in Chromium based browser */
+      /* Disable image load on running test in Chromium based browser */
 
       on('before:browser:launch', (browser = {}, launchOptions) => {
         console.log(launchOptions.args)
@@ -78,17 +78,20 @@ module.exports = defineConfig({
 
     },
     experimentalWebKitSupport: true,
-
     slowTestThreshold: 20000,
-
     specPattern: "cypress/e2e/*.cy.js",
 
-    //retries: {
-    //runMode: 1,
-    //openMode: 1,
-    //},
-    excludeSpecPattern: [
 
+    env: {
+      username: 'user',
+      password: 'pass'
+    },
+
+    // retries: {
+    //   //runMode: 1,
+    //   openMode: 1
+    // },
+    excludeSpecPattern: [
     ],
 
     watchForFileChanges: false,
@@ -96,7 +99,7 @@ module.exports = defineConfig({
     viewportHeight: 600,
   },
 
-  defaultCommandTimeout: 5000,
+  //defaultCommandTimeout: 5000,
   //chromeWebSecurity: false,
 
   // "chromePreferences": {

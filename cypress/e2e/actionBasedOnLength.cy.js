@@ -7,9 +7,9 @@ describe("Performing action if element is not present-  using Cypress", () => {
     cy.get(".form-group").then(($ele) => {
       if ($ele.find("#input-password1").length) {
         cy.log("-- input-passowrd1 element not present --- ");
-        cy.get('[id="input-email"]').type("lambdatest.Cypress@disposable.com");
       } else {
         cy.log("--  element is present --- ");
+        cy.get('[id="input-email"]').type("lambdatest.Cypress@disposable.com");
         cy.get('[id="input-password"]').type("Cypress123!!");
         cy.get('[type="submit"]').eq(0).click();
       }

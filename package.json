@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "Cypress_Test": "cypress run"
+    "Cypress_Test": "cypress run",
+    "cypress-prod-test": "npx cypress run --spec cypress/e2e/testEnv.cy.js --config-file prod.config.js",
+    "cypress-stage-test": "npx cypress run --spec cypress/e2e/testEnv.cy.js --config-file stage.config.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.3",
     "@cypress/skip-test": "^2.6.1",
-    "cypress": "^12.5.1",
+    "cypress": "13.2.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-plugin-tab": "^1.0.5",
     "cypress-real-events": "^1.7.6",

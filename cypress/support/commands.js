@@ -66,3 +66,11 @@ Cypress.Commands.add('sum', (first, second) => {
     return cy.wrap(value);
 
 })
+Cypress.Commands.add('loginBasicAuth', () => {
+    cy.visit('https://authenticationtest.com/HTTPAuth/', {
+        auth: {
+            username: 'user',
+            password: 'pass'
+        }
+    })
+})
