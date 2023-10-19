@@ -50,4 +50,6 @@
 41. Blur and focus on an element in Cypress => blurAndFocus.cy.js
 42. Read data from Excel in Cypress => readExcelData.cy.js
  => Run "npm install node-xlsx --save"
+43. How to handle tool tip
+44. How to handle basic auth headers
 
