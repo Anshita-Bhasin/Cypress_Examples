@@ -74,3 +74,20 @@ Cypress.Commands.add('loginBasicAuth', () => {
         }
     })
 })
+
+
+Cypress.Commands.add('verifyCountry', (country_code) => {
+    switch (country_code) {
+        case '/in/':
+            return 'India'
+        case '/uk/':
+            return 'United Kingdom'
+        case '/ae/':
+            return 'United Arab Emirates'
+        case '/ca/':
+            return 'Canada (English)'
+        default:
+            return 'United Arab Emirates'
+
+    }
+})

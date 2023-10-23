@@ -17,9 +17,14 @@ module.exports = defineConfig({
   },
 
   e2e: {
+    experimentalRunAllSpecs: false,
     experimentalStudio: true,
     setupNodeEvents(on, config) {
       on("task", {
+        log(message) {
+          console.log(message);
+          return null
+        },
         readDataFromExcel: (data) => {
           return readDataFromExcel(data)
 

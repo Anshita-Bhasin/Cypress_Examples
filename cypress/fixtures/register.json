@@ -1,0 +1,12 @@
+{
+  "name": {
+    "first_name": "AB",
+    "last_name": "Test"
+  },
+
+  "email": "AB12.Test@dispostable.com",
+  "phone": "1234567890",
+  "login": {
+    "password": "Cypress123!!"
+  }
+}
