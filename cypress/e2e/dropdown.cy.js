@@ -6,13 +6,11 @@ describe("Cypress useful commands", () => {
     // cy.get("select#first").select("Yahoo");
     cy.get("select#animals").select("Avatar");
     cy.get("select#second").select(["Donut", "Bonda"]);
-    // cy.get("select#first").select("Google", { force: true });
 
-    cy.log("print ", cy.get("select#first").children("option").eq(2));
+    cy.get("select#first").children("option").eq(2);
 
-    cy.log(
-      "children ",
-      cy.get("select#first").children("option").should("contain", "Yahoo")
-    );
+
+    cy.get("select#second").children("option").should("contain", "Donut", "Bonda")
+
   });
 });
