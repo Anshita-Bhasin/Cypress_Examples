@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="dynamic-content"></div>
+    <script>
+      setTimeout(() => {
+        document.getElementById('dynamic-content').textContent = 'Hello, World!';
+      }, Math.random() * 5000); // Introduce random delay
+    </script>
+  </body>
+</html>

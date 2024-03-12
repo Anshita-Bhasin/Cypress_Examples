@@ -25,7 +25,8 @@
     "cypress-file-upload": "^5.0.8",
     "cypress-plugin-tab": "^1.0.5",
     "cypress-real-events": "^1.7.6",
-    "playwright-webkit": "^1.25.2"
+    "playwright-webkit": "^1.25.2",
+    "webpack": "^5.89.0"
   },
   "dependencies": {
     "Cypress": "npm:cypress@^12.8.1",
