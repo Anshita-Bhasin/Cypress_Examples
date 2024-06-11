@@ -51,14 +51,14 @@ module.exports = defineConfig({
     },
     experimentalWebKitSupport: true,
     slowTestThreshold: 20000,
-    specPattern: "cypress/e2e/*.cy.js",
+    // specPattern: "cypress/e2e/*.cy.js",
 
     env: {
       username: "user",
       password: "pass",
     },
 
-// 
+    // 
 
     // retries: {
     //   //runMode: 1,

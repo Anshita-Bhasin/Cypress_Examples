@@ -1,0 +1,23 @@
+
+name: Cypress Automation 
+
+on: push
+
+jobs:
+  Cypress-Test:
+    timeout-minutes: 120
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Checkout Other Repo
+        uses: actions/checkout@master
+        with:
+          repository: Anshita-Bhasin/CypressTestGroup
+
+      - name: cypress-Test
+        uses: cypress-io/github-action@v6
+        with:
+          command: npm run regression:test
+          
